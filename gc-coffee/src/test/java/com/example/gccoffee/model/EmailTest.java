@@ -16,7 +16,7 @@ class EmailTest {
 
     @Test
     public void testValidEmail() {
-        Email email = new Email("venym@naver.com");
+        Email email = new Email("venzym@naver.com");
         assertEquals("venzym@naver.com", email.getAddress());
     }
 
