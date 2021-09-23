@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 import java.util.UUID;
 
 public class Product {
-    private final UUID uuid;
+    private final UUID productId;
     private String productName;
     private Category category;
     private long price;
@@ -13,7 +13,7 @@ public class Product {
     private LocalDateTime updatedAt; // set 할때마다 변경
 
     public Product(UUID uuid, String productName, Category category, long price) {
-        this.uuid = uuid;
+        this.productId = uuid;
         this.productName = productName;
         this.category = category;
         this.price = price;
@@ -22,7 +22,7 @@ public class Product {
     }
 
     public Product(UUID uuid, String productName, Category category, long price, String description, LocalDateTime createdAt, LocalDateTime updatedAt) {
-        this.uuid = uuid;
+        this.productId = uuid;
         this.productName = productName;
         this.category = category;
         this.price = price;
@@ -31,8 +31,8 @@ public class Product {
         this.updatedAt = updatedAt;
     }
 
-    public UUID getUuid() {
-        return uuid;
+    public UUID getProductId() {
+        return productId;
     }
 
     public String getProductName() {
