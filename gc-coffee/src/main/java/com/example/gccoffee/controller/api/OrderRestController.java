@@ -20,10 +20,10 @@ public class OrderRestController {
   @PostMapping("/api/v1/orders")
   public Order createOrder(@RequestBody CreateOrderRequest orderRequest) {
     return orderService.createOrder(
-      new Email(orderRequest.email()),
-      orderRequest.address(),
-      orderRequest.postcode(),
-      orderRequest.orderItems()
+      new Email(orderRequest.getEmail()),
+      orderRequest.getAddress(),
+      orderRequest.getPostcode(),
+      orderRequest.getOrderItems()
     );
   }
 }
