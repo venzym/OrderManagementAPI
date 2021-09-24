@@ -4,7 +4,25 @@ import com.example.gccoffee.model.OrderItem;
 
 import java.util.List;
 
-public record CreateOrderRequest(
-  String email, String address, String postcode, List<OrderItem> orderItems
-) {
+public class CreateOrderRequest {
+    private String email;
+    private String address;
+    private String postcode;
+    private List<OrderItem> orderItems;
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public String getPostcode() {
+        return postcode;
+    }
+
+    public List<OrderItem> getOrderItems() {
+        return orderItems;
+    }
 }
